@@ -8,7 +8,15 @@
 
 <body> 
 	<p>This is my web page</p>
-	<script>alert('oi')</script>
+	<script>
+		const Http = new XMLHttpRequest();
+		const url='http://requestbin.fullcontact.com/w7jxyiw7';
+		Http.open("GET", url);
+		Http.send();
+		Http.onreadystatechange=(e)=>{
+			console.log(Http.responseText)
+		}
+	</script>
 </body>
 
 </html> 
